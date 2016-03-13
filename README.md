@@ -23,6 +23,8 @@ export NVM_DIR="$HOME/.nvm"
 ## Install NVM for NodeJS
 ```nvm install v5.8.0```
 ```nvm use v5.8.0```
+## update apt
+```apt-get update```
 ## install git
 ```apt-get install git-all```
 
@@ -38,6 +40,5 @@ sudo chmod -R 777 /var/www/
 sudo -s
 nginx=stable # use nginx=development for latest development version
 add-apt-repository ppa:nginx/$nginx
-apt-get update
 apt-get install nginx
 ```
