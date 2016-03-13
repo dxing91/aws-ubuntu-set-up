@@ -76,6 +76,9 @@ create symlink in sites-enabled
 ```cd ../sites-enabled```
 ```ln -s /etc/nginx/sites-available/<mysite> <mysite>```
 
+stop apache server
+```/etc/init.d/apache2 stop```
+
 Restart nginx
 ```sudo service nginx restart```
 
