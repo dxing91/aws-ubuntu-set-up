@@ -26,6 +26,9 @@ export NVM_DIR="$HOME/.nvm"
 ## install git
 ```apt-get install git-all```
 
+## chmod your /var/www repo
+sudo chmod -R 777 /var/www/
+
 ## clone your repo into /var/www
 ```cd /var/www```
 ```git clone your-repo```
