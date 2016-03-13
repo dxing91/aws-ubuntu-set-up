@@ -26,6 +26,10 @@ export NVM_DIR="$HOME/.nvm"
 ## install git
 ```apt-get install git-all```
 
+## clone your repo into /var/www
+```cd /var/www```
+```git clone your-repo```
+
 ## install nginx (proxy server)
 ```
 sudo -s
