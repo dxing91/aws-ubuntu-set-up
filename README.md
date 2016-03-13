@@ -59,15 +59,18 @@ write in mysite file
 server {
     listen 80;
 
-    server_name example.com;
+    server_name <mysite>.com;
 
     location / {
-        proxy_pass http://APP_PRIVATE_IP_ADDRESS:8080;
-        proxy_http_version 1.1;
-        proxy_set_header Upgrade $http_upgrade;
-        proxy_set_header Connection 'upgrade';
-        proxy_set_header Host $host;
-        proxy_cache_bypass $http_upgrade;
+        proxy_pass                  http://APP_PRIVATE_IP_ADDRESS:8080;
+        proxy_http_version          1.1;
+        gzip                        on;
+        gzip_types                  text/css application/javascript text/html;
+        gzip_min_length             1000;
+        proxy_set_header            Upgrade         $http_upgrade;
+        proxy_set_header            Connection      'upgrade';
+        proxy_set_header            Host            $host;
+        proxy_cache_bypass          $http_upgrade;
     }
 }
 ```
