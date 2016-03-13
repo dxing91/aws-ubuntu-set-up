@@ -2,6 +2,9 @@
 
 ##Create an ubuntu instance on AWS
 
+##Use root
+```sudo -s```
+
 ##Add user / use password not pem
 change PasswordAuthentication to yes
 change PermitRootLogin to yes (for login)
