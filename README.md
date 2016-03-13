@@ -9,8 +9,6 @@ in ```/etc/ssh/sshd_config```
 restart your ssh service
 ```service ssh restart```
 
-##make sudo
-sudo su
 ## tunnel into cloud linux 
 ssh username@serveraddress
 ## install nvm
