@@ -14,9 +14,23 @@ ssh username@serveraddress
 ## install nvm
 Get it!
 ```wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.31.0/install.sh | bash```
+add below to ```~/.bashrc```, ```~/.profile```, or ```~/.zshrc```
+```
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
+```
 ```source ~/.nvm/nvm.sh```
 ## Install NVM for NodeJS
 ```nvm install v5.8.0```
 ```nvm use v5.8.0```
 ## install git
 ```apt-get install git-all```
+
+## install nginx (proxy server)
+```
+sudo -s
+nginx=stable # use nginx=development for latest development version
+add-apt-repository ppa:nginx/$nginx
+apt-get update
+apt-get install nginx
+```
