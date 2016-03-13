@@ -45,3 +45,37 @@ nginx=stable # use nginx=development for latest development version
 add-apt-repository ppa:nginx/$nginx
 apt-get install nginx
 ```
+
+## setup reverse proxy 
+```
+cd /etc/nginx/sites-available/
+touch <mysite>
+vim mysite
+```
+
+write in mysite file
+
+```
+server {
+    listen 80;
+
+    server_name example.com;
+
+    location / {
+        proxy_pass http://APP_PRIVATE_IP_ADDRESS:8080;
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection 'upgrade';
+        proxy_set_header Host $host;
+        proxy_cache_bypass $http_upgrade;
+    }
+}
+```
+
+create symlink in sites-enabled
+```cd ../sites-enabled```
+```ln -s /etc/nginx/sites-available/<mysite> <mysite>```
+
+Restart nginx
+```sudo service nginx restart```
+
