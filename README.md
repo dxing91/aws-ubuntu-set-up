@@ -15,6 +15,8 @@ ssh into server
 change PasswordAuthentication to yes
 change PermitRootLogin to yes (for login)
 in ```/etc/ssh/sshd_config```
+change ubuntu user password
+```sudo passwd ubuntu```
 restart your ssh service
 ```service ssh restart```
 
