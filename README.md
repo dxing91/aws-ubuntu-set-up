@@ -2,6 +2,12 @@
 
 ##Create an ubuntu instance on AWS
 
+##First time login
+make sure private key file is not publicly viewable
+```chmod 400 key.pem```
+ssh into server
+```ssh -i key.pem username@serveraddress```
+
 ##Use root
 ```sudo -s```
 
