@@ -93,3 +93,11 @@ stop apache server
 Restart nginx
 ```sudo service nginx restart```
 
+Or reload
+```sudo nginx -s reload```
+
+## AWS Inbound Rules
+
+Add HTTP and HTTPS inbound rules in EC2 security groups.
+
+
